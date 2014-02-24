@@ -37,7 +37,7 @@ namespace SyncContext
                 do
                 {
                     // Restoring the Synchronization.Current before continuation
-                    using (this.AsDefault())
+                    //using (this.AsDefault())
                         next.Item1(next.Item2);
                 } while (_queue.TryDequeue(out next));
 
